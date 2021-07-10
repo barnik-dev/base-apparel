@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background: linear-gradient(135deg, white, #fff5f5);
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2.3rem;
+  letter-spacing: 8px;
+  line-height: 1.1;
+  color: #413a3a;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ce9797;
+}
+
+header {
+  padding: 2em 0;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero .hero-img-m {
+  width: 100%;
+}
+
+.hero .hero-img-d {
+  display: none;
+}
+
+.hero .hero-text {
+  margin: 3em 0;
+}
+
+.hero .hero-text .head {
+  text-transform: uppercase;
+}
+
+.hero .hero-text .head span {
+  font-weight: 300;
+  color: #ce9797;
+}
+
+.hero .hero-text .subtext {
+  margin: 1.2em 0 0;
+}
+
+.hero .email-form {
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.hero .email-form #email {
+  padding: 1.2em 2.2em;
+  width: 100%;
+  border: 1px solid #ce9797;
+  border-radius: 30px;
+  font-family: "Josefin Sans", sans-serif;
+  color: #ce9797;
+  background: linear-gradient(135deg, white, #fff5f5);
+}
+
+.hero .email-form #email:focus {
+  outline: none;
+}
+
+.hero .email-form #email::-webkit-input-placeholder {
+  opacity: 0.6;
+  color: #ce9797;
+}
+
+.hero .email-form #email:-ms-input-placeholder {
+  opacity: 0.6;
+  color: #ce9797;
+}
+
+.hero .email-form #email::-ms-input-placeholder {
+  opacity: 0.6;
+  color: #ce9797;
+}
+
+.hero .email-form #email::placeholder {
+  opacity: 0.6;
+  color: #ce9797;
+}
+
+.hero .email-form #email:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.hero .email-form #email:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.hero .email-form #email:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.hero .email-form #email:focus::placeholder {
+  color: transparent;
+}
+
+.hero .email-form .submit {
+  position: absolute;
+  padding: 1em 2em;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  top: 0;
+  right: -2px;
+  border-radius: 30px;
+  -webkit-box-shadow: 3px 3px 10px rgba(65, 58, 58, 0.2);
+          box-shadow: 3px 3px 10px rgba(65, 58, 58, 0.2);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.hero .email-form .email-id {
+  border-color: #f96262 !important;
+}
+
+.hero .email-form .error-msg {
+  position: absolute;
+  left: 30px;
+  bottom: -25px;
+  display: none;
+}
+
+.hero .email-form .error-msg p {
+  color: #f96262;
+  font-size: 0.8rem;
+}
+
+.hero .email-form .error-img {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 70px;
+  display: none;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 2.1em;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2em;
+  }
+  .hero .hero-img-m {
+    display: none;
+  }
+  .hero .hero-img-d {
+    display: inline-block;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 100%;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+  .hero .hero-text {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .hero .submit:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-box-shadow: 10px 10px 13px rgba(65, 58, 58, 0.2);
+            box-shadow: 10px 10px 13px rgba(65, 58, 58, 0.2);
+  }
+}
+
+@media only screen and (min-width: 1330px) {
+  body {
+    background: url("../images/bg-pattern-desktop.svg") no-repeat;
+  }
+  header {
+    max-width: 50%;
+  }
+  .hero {
+    text-align: start;
+  }
+  .hero .hero-img-d {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+  }
+  .hero .hero-text {
+    margin-top: 8em;
+  }
+  .hero .hero-text .head {
+    font-size: 5rem;
+    letter-spacing: 10px;
+  }
+  .hero .submit {
+    padding: 1em 2.5em !important;
+  }
+  .hero .error-img {
+    right: 90px !important;
+  }
+  .container {
+    padding: 0 6em;
+  }
+}
+/*# sourceMappingURL=main.css.map */
